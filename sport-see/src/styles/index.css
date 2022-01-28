@@ -1,0 +1,18 @@
+body{
+    margin:0;
+    padding:0;
+    font-size: 1rem;
+
+}
+
+ul{
+    padding-left: 0;
+}
+
+li{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+}
