@@ -1,0 +1,33 @@
+.aside_container {
+  background: #020203;
+  width: 8%;
+  height: 1100px;
+  min-height: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.aside_container .icons_list {
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.aside_container .copiryght {
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+}
+
+.aside_container .copiryght p {
+  color: #fff;
+  rotate: 270deg;
+  width: 300px;
+  text-align: center;
+}
