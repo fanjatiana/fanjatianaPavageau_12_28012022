@@ -1,11 +1,11 @@
 import { BrowserRouter } from "react-router-dom";
-import Header from "./containers/Header";
+import DashBoard from "./pages/DashBoard";
 
 function App() {
   return (
     <>
       <BrowserRouter>
-        <Header />
+        <DashBoard />
       </BrowserRouter>
     </>
   );
