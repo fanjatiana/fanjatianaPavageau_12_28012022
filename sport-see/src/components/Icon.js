@@ -1,13 +1,13 @@
 import React from 'react';
-import '../styles/sportThemeIcon.css'
+import '../styles/icon.css'
 
-const SportThemeIcon = (props) => {
+const Icon = (props) => {
     const {imgIcon, imgDescription} = props;
     return (
-        <div className='sport_icon'>
+        <div className='icon'>
             <img src={imgIcon} alt = {imgDescription}/>
         </div>
     );
 };
 
-export default SportThemeIcon;
+export default Icon;

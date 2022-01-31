@@ -1,5 +1,6 @@
 import React from 'react';
 import { useFetch } from '../api/useFetch';
+import '../styles/helloUser.css'
 
 const HelloUser = () => {
     const { data, isLoading, error } = useFetch("http://localhost:4000/user/12");
@@ -16,7 +17,7 @@ if (error) {
     <div>Is Loading</div>
   ) : (
     (
-        <div>
+        <div className='helloUser_container'>
             <h2>Bonjour</h2>
             <p>Félicitation ! Vous avez explosé vos objectifs hier 👏</p>
         </div>
