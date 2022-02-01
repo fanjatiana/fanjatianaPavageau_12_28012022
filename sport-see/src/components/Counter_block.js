@@ -7,7 +7,7 @@ import FatIcon from "../assets/fat-icon.svg";
 import ProteinIcon from "../assets/protein-icon.svg";
 import '../styles/counter_block.css'
 
-const Counter_block = (props) => {
+const CounterBlock = (props) => {
   const {calorieValue, proteinValue, carbohydrateValue, lipidValue} = props;
   return (
     <>
@@ -43,4 +43,4 @@ const Counter_block = (props) => {
   );
 };
 
-export default Counter_block;
+export default CounterBlock;

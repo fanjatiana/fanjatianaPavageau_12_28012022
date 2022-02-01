@@ -3,9 +3,9 @@ import { useFetch } from '../api/useFetch';
 import '../styles/helloUser.css'
 
 const HelloUser = () => {
-    const { data, isLoading, error } = useFetch("http://localhost:4000/user/12");
+    const { data, isLoading, error } = useFetch("http://localhost:3000/user/12");
 
-
+//console.log(data)
 
 if (error) {
     return (
