@@ -1,20 +1,13 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import { useFetch, useFetchById } from "../api/useFetch";
-import CounterBlock from "../components/Counter_block";
+import CounterBlock from "../components/CounterBlock";
 import NotFound from "../pages/NotFound";
 
 import "../styles/caloriesCounter.css";
 
-const CalorieCounter = () => {
-  const url = useParams();
-  const userId = url.id;
-  const { isLoading, data, error } = useFetchById(userId);
-  console.log(data)
-  
-if(error) return <NotFound />
-  
-if (isLoading)  return <>is loading</>
+const CalorieCounter = (props) => {
+  const {data} = props;
 const keyData = {
   calorie : data.Infos.keyData.calorieCount,
   protein: data.Infos.keyData.proteinCount,

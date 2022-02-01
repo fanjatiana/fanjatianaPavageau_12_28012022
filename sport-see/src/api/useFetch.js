@@ -52,7 +52,6 @@ export function useFetchById(id) {
           })
         )
       ).then((userData) => {
-        console.log(userData)
         const [Infos, Activity, AverageSessions, Performance] = userData;
         setData({
           Infos: Infos.data,
