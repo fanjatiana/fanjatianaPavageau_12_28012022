@@ -1,0 +1,9 @@
+.block_error404{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    height: 600px;
+}

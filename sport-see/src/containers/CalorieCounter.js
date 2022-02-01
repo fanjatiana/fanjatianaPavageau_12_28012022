@@ -2,6 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import { useFetch, useFetchById } from "../api/useFetch";
 import CounterBlock from "../components/Counter_block";
+import NotFound from "../pages/NotFound";
 
 import "../styles/caloriesCounter.css";
 
@@ -11,7 +12,7 @@ const CalorieCounter = () => {
   const { isLoading, data, error } = useFetchById(userId);
   console.log(data)
   
-if(error) return <h2>erreur 404</h2>
+if(error) return <NotFound />
   
 if (isLoading)  return <>is loading</>
 const keyData = {

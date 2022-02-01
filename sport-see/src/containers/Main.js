@@ -4,6 +4,7 @@ import CalorieCounter from "./CalorieCounter";
 import "../styles/main.css";
 import { useParams } from "react-router-dom";
 import { useFetchById } from "../api/useFetch";
+import NotFound from "../pages/NotFound";
 
 const Main = () => {
   const url = useParams();
@@ -11,7 +12,7 @@ const Main = () => {
   const { isLoading, data, error } = useFetchById(userId);
   console.log(data)
   
-if(error) return <h2>erreur 404</h2>
+if(error) return <NotFound />
   
 if (isLoading)  return <>is loading</>
    return (
