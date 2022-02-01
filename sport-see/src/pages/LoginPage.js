@@ -1,19 +1,18 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { USER_MAIN_DATA } from "../api/data.js";
+
 
 const LoginPage = () => {
 
   return (
     <div>
       <h2>Connexion</h2>
-      <p>Veuillez selectionner un identifiant</p>
+      <p>Veuillez selectionner un utilisateur</p>
       <ul>
-        <li>
-          <NavLink to="/user">Karl</NavLink>
-        </li>
-        <li>
-        <NavLink to="/user12">Cecilia</NavLink>
-        </li>
+      {USER_MAIN_DATA.map((user)=> <li>
+          <NavLink to ={`/user/${user.id}`}>{user.userInfos.firstName}</NavLink>
+        </li>)}
       </ul>
     </div>
   );

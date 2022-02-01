@@ -2,26 +2,15 @@ import React from 'react';
 import { useFetch } from '../api/useFetch';
 import '../styles/helloUser.css'
 
-const HelloUser = () => {
-    const { data, isLoading, error } = useFetch("http://localhost:3000/user/12");
+const HelloUser = (props) => {
+  const {name} = props;
 
-//console.log(data)
-
-if (error) {
-    return (
-    
-        <div>Error</div>
-    );
-  }
-  return isLoading ? (
-    <div>Is Loading</div>
-  ) : (
-    (
+return(
         <div className='helloUser_container'>
-            <h2>Bonjour</h2>
+            <h2>Bonjour {name}</h2>
             <p>Félicitation ! Vous avez explosé vos objectifs hier 👏</p>
         </div>
-    ));
+    );
     
 };
 
