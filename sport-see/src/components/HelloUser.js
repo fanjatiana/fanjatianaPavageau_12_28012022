@@ -7,7 +7,7 @@ const HelloUser = (props) => {
 
 return(
         <div className='helloUser_container'>
-            <h2>Bonjour {name}</h2>
+            <h2>Bonjour <span>{name}</span></h2>
             <p>Félicitation ! Vous avez explosé vos objectifs hier 👏</p>
         </div>
     );

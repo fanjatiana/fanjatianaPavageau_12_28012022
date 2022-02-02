@@ -28,7 +28,7 @@ const CounterBlock = (props) => {
       <div  className="caloriesCounter_block">
         <Icon imgIcon={CarbsIcon} imgDescription="icon pomme" />
         <div className="calories_info">
-          <h4>Glucies</h4>
+          <h4>Glucides</h4>
           <p>{carbohydrateValue}g</p>
         </div>
       </div>

@@ -5,11 +5,11 @@ import '../styles/notFound.css';
 import imgError404 from '../assets/404.png'
 const NotFound = () => {
     return (
-        <div className='block_error404'>
+        <main className='block_error404'>
             <h2><img src={imgError404} alt=""/></h2>
             <p>Oops page introuvable</p>
             <Link to ="/">Retour vers la page d'accueil</Link>
-        </div>
+        </main>
     );
 };
 

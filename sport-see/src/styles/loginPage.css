@@ -1,0 +1,48 @@
+.login_container {
+  width: 90%;
+  height: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+p {
+  font-size: 1.5rem;
+}
+
+.user_list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.user_list li {
+  border: 1px #000 solid;
+  width: 200px;
+  border-radius: 5px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  margin-top: 1em;
+  background: #ff0101;
+  font-size: 1.2rem;
+  transform: scale(1);
+  transition-property: transform;
+  transition-duration: 0.2s;
+}
+
+.user_list li:hover {
+  background: #ff7878;
+  transform: scale(1.1);
+}
+
+a{
+    width: 100%;
+    text-align: center;
+}

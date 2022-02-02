@@ -1,3 +1,7 @@
 .helloUser_container{
-    width: 80%;
+    width: 100%;
+}
+
+h2 span{
+    color: #FF0101;
 }
