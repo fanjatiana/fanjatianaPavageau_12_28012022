@@ -1,6 +1,6 @@
 .aside_container {
   background: #020203;
-  width: 8%;
+  width: 100px;
   height: 1100px;
   min-height: 800px;
   display: flex;
@@ -27,7 +27,7 @@
 
 .aside_container .copiryght p {
   color: #fff;
-  rotate: 270deg;
+  transform : rotate(270deg);
   width: 300px;
   text-align: center;
 }

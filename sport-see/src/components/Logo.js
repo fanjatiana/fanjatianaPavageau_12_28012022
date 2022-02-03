@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import SportSeeLogo from "../assets/logo.png";
-import "../styles/logo.css"
+import "../styles/logo.css";
 
 const Logo = () => {
   return (

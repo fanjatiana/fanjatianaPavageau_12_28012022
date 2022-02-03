@@ -1,7 +1,8 @@
 .icon{
     margin: 0.5em 0 1em;
+    width: 60px;
 }
 
 .icon img {
-    width: 80px;
+    width: 100%;
 }

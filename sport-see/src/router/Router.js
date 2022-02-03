@@ -1,6 +1,5 @@
 import React from "react";
-import { Route, Routes, useParams } from "react-router-dom";
-import { useFetch, useFetchById } from "../api/useFetch";
+import { Route, Routes } from "react-router-dom";
 import DashBoard from "../pages/DashBoard";
 import LoginPage from "../pages/LoginPage";
 import NotFound from "../pages/NotFound";

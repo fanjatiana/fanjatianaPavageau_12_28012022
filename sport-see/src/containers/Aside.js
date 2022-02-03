@@ -13,10 +13,7 @@ const Aside = () => {
         <Icon imgIcon={Yoga} imgDescription="icon yoga" />
         <Icon imgIcon={Swimming} imgDescription="icon natation" />
         <Icon imgIcon={Cycling} imgDescription="icon cyclisme" />
-        <Icon
-          imgIcon={BodyBuilding}
-          imgDescription="icon musculation"
-        />
+        <Icon imgIcon={BodyBuilding} imgDescription="icon musculation" />
       </div>
       <div className="copiryght">
         <p>Copiryght, SportSee 2020</p>
