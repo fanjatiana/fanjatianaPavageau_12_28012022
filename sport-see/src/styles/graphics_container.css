@@ -1,7 +1,8 @@
 .graphics_container{
     height: 800px;
-    width: 70%;
+    width: 65%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    margin-left: 5%;
 }

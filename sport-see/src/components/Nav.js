@@ -18,7 +18,7 @@ const Nav = () => {
         </li>
         <li>
           <NavLink
-            to="/"
+            to="*"
             className={({ isActive }) =>
               "header_Nav_link" + (isActive ? " activated" : "")
             }
@@ -28,7 +28,7 @@ const Nav = () => {
         </li>
         <li>
           <NavLink
-            to="/"
+            to="*"
             className={({ isActive }) =>
               "header_Nav_link" + (isActive ? " activated" : "")
             }
@@ -38,7 +38,7 @@ const Nav = () => {
         </li>
         <li>
           <NavLink
-            to="/"
+            to="*"
             className={({ isActive }) =>
               "header_Nav_link" + (isActive ? " activated" : "")
             }

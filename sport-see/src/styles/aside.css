@@ -16,6 +16,12 @@
   align-items: center;
   width: 100%;
 }
+
+.aside_container .icons_list a{
+  display: flex;
+  justify-content: center;
+  margin:1em 0;
+}
 .aside_container .copiryght {
   height: 30%;
   display: flex;
