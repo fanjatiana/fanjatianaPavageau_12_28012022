@@ -53,6 +53,7 @@ export function useFetchById(id) {
         )
       ).then((userData) => {
         const [Infos, Activity, AverageSessions, Performance] = userData;
+ 
         setData({
           Infos: Infos.data,
           ACtivity: Activity.data,
@@ -65,5 +66,6 @@ export function useFetchById(id) {
 
     fetchData();
   }, [id]);
+  console.log(data)
   return { isLoading, data, error };
 }
