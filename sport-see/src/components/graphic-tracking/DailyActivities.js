@@ -1,3 +1,4 @@
+import propTypes from "prop-types";
 import React from "react";
 import {
   BarChart,
@@ -13,6 +14,7 @@ import {
 import "../../styles/dailyActivities_block.css";
 const DailyActivities = (props) => {
   const { dataActivity} = props;
+  console.log(dataActivity)
   const formatDate = (index) => {
     return index + 1;
   };
@@ -87,5 +89,9 @@ const DailyActivities = (props) => {
     </div>
   );
 };
+
+DailyActivities.propTypes = {
+  dataActivity: propTypes.array.isRequired
+}
 
 export default DailyActivities;

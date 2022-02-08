@@ -1,3 +1,4 @@
+import propTypes from "prop-types";
 import React from "react";
 import {
   Radar,
@@ -19,7 +20,7 @@ const replaceNumbers = {
 
 const formatKind = (kind) => replaceNumbers[kind];
 const TypeOfActivities = ({ dataPerformance }) => {
-  console.log(dataPerformance.data);
+  console.log(dataPerformance);
   return (
     <div className="typeOfActivities_block">
       <ResponsiveContainer width="100%" height="100%">
@@ -44,5 +45,10 @@ const TypeOfActivities = ({ dataPerformance }) => {
     </div>
   );
 };
+
+
+TypeOfActivities.propTypes = {
+  dataPerformance: propTypes.object.isRequired
+}
 
 export default TypeOfActivities;

@@ -6,9 +6,11 @@ import CarbsIcon from "../assets/carbs-icon.svg";
 import FatIcon from "../assets/fat-icon.svg";
 import ProteinIcon from "../assets/protein-icon.svg";
 import "../styles/counter_block.css";
+import propTypes from "prop-types";
 
 const CounterBlock = (props) => {
   const { calorieValue, proteinValue, carbohydrateValue, lipidValue } = props;
+  console.log(calorieValue);
   return (
     <>
       <div className="caloriesCounter_block">
@@ -41,6 +43,13 @@ const CounterBlock = (props) => {
       </div>
     </>
   );
+};
+
+CounterBlock.propTypes = {
+  calorieValue: propTypes.number,
+  proteinValue: propTypes.number,
+  carbohydrateValue: propTypes.number,
+  lipidValue: propTypes.number,
 };
 
 export default CounterBlock;

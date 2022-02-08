@@ -1,3 +1,4 @@
+import propTypes from "prop-types";
 import React from "react";
 import "../styles/helloUser.css";
 
@@ -13,5 +14,9 @@ const HelloUser = (props) => {
     </div>
   );
 };
+
+HelloUser.propTypes = {
+  name : propTypes.string.isRequired,
+}
 
 export default HelloUser;

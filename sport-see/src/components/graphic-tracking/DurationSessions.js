@@ -1,3 +1,4 @@
+import propTypes from "prop-types";
 import React from "react";
 import {
   AreaChart,
@@ -50,5 +51,7 @@ const DurationSessions = (props) => {
     </div>
   );
 };
-
+DurationSessions.propTypes = {
+  dataAverageSessions: propTypes.array.isRequired
+}
 export default DurationSessions;

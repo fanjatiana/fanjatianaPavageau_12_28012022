@@ -1,3 +1,4 @@
+import propTypes from "prop-types";
 import React from "react";
 import CounterBlock from "../components/CounterBlock";
 import "../styles/caloriesCounter.css";
@@ -21,5 +22,9 @@ const CalorieCounter = (props) => {
     </div>
   );
 };
+
+CalorieCounter.propTypes = {
+  data : propTypes.object.isRequired
+}
 
 export default CalorieCounter;

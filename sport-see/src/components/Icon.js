@@ -1,5 +1,7 @@
+import PropTypes from "prop-types";
 import React from "react";
 import "../styles/icon.css";
+
 
 const Icon = (props) => {
   const { imgIcon, imgDescription } = props;
@@ -10,4 +12,11 @@ const Icon = (props) => {
   );
 };
 
+Icon.propTypes = {
+  imgIcon : PropTypes.string.isRequired,
+  imgDescription: PropTypes.string
+}
+
+
 export default Icon;
+

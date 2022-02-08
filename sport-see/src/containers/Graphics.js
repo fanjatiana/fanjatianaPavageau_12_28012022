@@ -1,3 +1,4 @@
+import propTypes from "prop-types";
 import React from "react";
 import AverageScore from "../components/graphic-tracking/AverageScore";
 import DailyActivities from "../components/graphic-tracking/DailyActivities";
@@ -17,4 +18,7 @@ const Graphics = (props) => {
   );
 };
 
+Graphics.propTypes = {
+  data : propTypes.object.isRequired
+}
 export default Graphics;

@@ -1,3 +1,4 @@
+import propTypes from "prop-types";
 import React from "react";
 import { PieChart, Pie, Cell, ResponsiveContainer } from "recharts";
 import "../../styles/averageScore_block.css";
@@ -23,5 +24,9 @@ const AverageScore = (props) => {
       </ResponsiveContainer>
   </div>;
 };
+
+AverageScore.propTypes = {
+  dataScore: propTypes.array.isRequired
+}
 
 export default AverageScore;
