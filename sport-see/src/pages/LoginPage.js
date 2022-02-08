@@ -11,10 +11,10 @@ const LoginPage = () => {
       <p>Veuillez selectionner un utilisateur</p>
       <ul className="user_list">
         {USER_MAIN_DATA.map((user) => (
-          <li>
-            <NavLink to={`/user/${user.id}`}>
+          <li key={user.id}>
+            <NavLink to={`/user/${user.id}` } >
               {user.userInfos.firstName}
-              {user.id=== 12? <img className="avatar" src={AvatarMen}/> : <img className="avatar" src={AvatarWomen}/> }
+              {user.id=== 12? <img className="avatar" src={AvatarMen} alt={`avatar de ${user.userInfos.firstName}`} /> : <img className="avatar" src={AvatarWomen} alt={`avatar de ${user.userInfos.firstName}`}/> }
             </NavLink>
           </li>
         ))}
