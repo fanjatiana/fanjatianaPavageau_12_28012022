@@ -1,5 +1,5 @@
 import propTypes from "prop-types";
-import React from "react";
+import React, { PureComponent } from "react";
 import {
   BarChart,
   Bar,
@@ -13,10 +13,23 @@ import {
 
 import "../../styles/dailyActivities_block.css";
 const DailyActivities = (props) => {
-  const { dataActivity} = props;
-  console.log(dataActivity)
+  const { dataActivity } = props;
+  console.log(dataActivity);
   const formatDate = (index) => {
     return index + 1;
+  };
+
+  const CustomTooltip = ({ active, payload, label }) => {
+    if (active && payload && payload.length) {
+      return (
+        <div className="custom-tooltip">
+          <p>{`${payload[0].value}g`}</p>
+          <p>{` ${payload[1].value}kCal`}</p>
+        </div>
+      );
+    }
+
+    return null;
   };
 
   return (
@@ -26,7 +39,7 @@ const DailyActivities = (props) => {
         <BarChart
           data={dataActivity}
           margin={{
-            top: 5,
+            top:30,
             right: 0,
             left: 0,
             bottom: 50,
@@ -35,27 +48,31 @@ const DailyActivities = (props) => {
           <CartesianGrid
             strokeDasharray="3"
             vertical={false}
-            stroke="#dedede"
+            stroke="#FBFBFB"
           />
 
           <XAxis
             tickLine={false}
             stroke="#dedede"
-            /*modifier les valeurs de l'axe x */
             tickFormatter={formatDate}
           />
           <YAxis orientation="right" tickLine={false} axisLine={false} />
           <Tooltip
-            position={{ y: -30 }}
+            content={<CustomTooltip />}
+            position={{ y: -20 }}
             wrapperStyle={{
+              width: "auto",
+              color:"#FFF",
+              height: 90,
               backgroundColor: "#E60000",
-              color: "#FFFFFF",
-              width: "2px",
-              height: "100px",
               display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              marginLeft: "80px",
+              flexDirection: "column",
+              justifyContent:"center",
+              alignContent :"space-between",
+              alignItems:"center",
+              flexWrap: "wrap",
+              padding : "1em",
+              fontSize:"0.8em"
             }}
             cursor={{
               fill: "rgba(196, 196, 196, 0.5)",
@@ -91,7 +108,7 @@ const DailyActivities = (props) => {
 };
 
 DailyActivities.propTypes = {
-  dataActivity: propTypes.array.isRequired
-}
+  dataActivity: propTypes.array.isRequired,
+};
 
 export default DailyActivities;
