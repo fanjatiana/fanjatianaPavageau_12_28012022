@@ -13,6 +13,12 @@ import "../../styles/durationSessions_block.css";
 const DurationSessions = (props) => {
   const { dataAverageSessions } = props;
   console.log(dataAverageSessions);
+  const week = ["L", "M", "M", "J", "V", "S", "D"];
+  console.log(week);
+  const dateFormatter = (day) => {
+    day.toString();
+  };
+
   return (
     <div className="durationSessions_block">
       <ResponsiveContainer width="100%" height="100%">
@@ -27,8 +33,10 @@ const DurationSessions = (props) => {
             bottom: 0,
           }}
         >
-          <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="day" />
+
+          <XAxis dataKey="day" 
+          type = "string"
+          tickFormatter={dateFormatter} />
           <YAxis />
           <Tooltip />
           <Area

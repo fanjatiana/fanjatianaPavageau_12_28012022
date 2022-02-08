@@ -12,10 +12,11 @@ import {
 
 import "../../styles/dailyActivities_block.css";
 const DailyActivities = (props) => {
-  const { dataActivity, dataAverageSessions } = props;
-  console.log(dataActivity);
-  console.log(dataAverageSessions);
-const formatDay = (day) => (day++)
+  const { dataActivity} = props;
+  const formatDate = (index) => {
+    return index + 1;
+  };
+
   return (
     <div className="dailyActivities_block">
       <h3>Activité quotidienne</h3>
@@ -37,13 +38,10 @@ const formatDay = (day) => (day++)
 
           <XAxis
             tickLine={false}
-            stroke="#dedede" 
+            stroke="#dedede"
             /*modifier les valeurs de l'axe x */
-         
-            tickFormatter={formatDay}
-           
+            tickFormatter={formatDate}
           />
-
           <YAxis orientation="right" tickLine={false} axisLine={false} />
           <Tooltip
             position={{ y: -30 }}

@@ -9,7 +9,7 @@ const Graphics = (props) => {
   const { data } = props;
   return (
     <div className="graphics_container">
-      <DailyActivities dataActivity={data.ACtivity.sessions} dataAverageSessions={data.AverageSessions}  />
+      <DailyActivities dataActivity={data.ACtivity.sessions}  />
       <DurationSessions dataAverageSessions={data.AverageSessions} />
       <TypeOfActivities dataPerformance={data.Performance} />
       <AverageScore dataScore={data.Performance.data} />

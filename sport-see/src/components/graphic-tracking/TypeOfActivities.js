@@ -33,7 +33,7 @@ const TypeOfActivities = ({ dataPerformance }) => {
           <PolarAngleAxis dataKey="kind" tickFormatter={formatKind} />
           <PolarRadiusAxis />
           <Radar
-            name="Mike"
+            name=""
             dataKey="value"
             stroke="#8884d8"
             fill="#8884d8"
