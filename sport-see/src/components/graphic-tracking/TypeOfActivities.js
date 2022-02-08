@@ -20,7 +20,7 @@ const replaceNumbers = {
 
 const formatKind = (kind) => replaceNumbers[kind];
 const TypeOfActivities = ({ dataPerformance }) => {
-  console.log(dataPerformance);
+ // console.log(dataPerformance);
   return (
     <div className="typeOfActivities_block">
       <ResponsiveContainer width="100%" height="100%">

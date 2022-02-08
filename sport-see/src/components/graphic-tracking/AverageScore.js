@@ -5,7 +5,7 @@ import "../../styles/averageScore_block.css";
 
 const AverageScore = (props) => {
   const { dataScore } = props;
-  console.log(dataScore);
+  //console.log(dataScore);
   const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042"];
   return <div className="averageScore_block">
     <ResponsiveContainer width="100%" height="100%">

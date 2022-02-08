@@ -10,7 +10,6 @@ import propTypes from "prop-types";
 
 const CounterBlock = (props) => {
   const { calorieValue, proteinValue, carbohydrateValue, lipidValue } = props;
-  console.log(calorieValue);
   return (
     <>
       <div className="caloriesCounter_block">

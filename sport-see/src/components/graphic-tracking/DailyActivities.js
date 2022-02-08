@@ -14,7 +14,6 @@ import {
 import "../../styles/dailyActivities_block.css";
 const DailyActivities = (props) => {
   const { dataActivity } = props;
-  console.log(dataActivity);
   const formatDate = (index) => {
     return index + 1;
   };

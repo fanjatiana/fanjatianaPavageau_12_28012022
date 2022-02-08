@@ -66,6 +66,5 @@ export function useFetchById(id) {
 
     fetchData();
   }, [id]);
-  console.log(data)
   return { isLoading, data, error };
 }
