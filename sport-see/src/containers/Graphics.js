@@ -8,12 +8,13 @@ import "../styles/graphics_container.css";
 
 const Graphics = (props) => {
   const { data } = props;
+
   return (
     <div className="graphics_container">
       <DailyActivities dataActivity={data.ACtivity.sessions}  />
       <DurationSessions dataAverageSessions={data.AverageSessions} />
       <TypeOfActivities dataPerformance={data.Performance} />
-      <AverageScore dataScore={data.Performance.data} />
+      <AverageScore dataScore={data.Infos.todayScore*100} />
     </div>
   );
 };

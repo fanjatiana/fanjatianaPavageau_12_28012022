@@ -8,28 +8,15 @@ import {
   CartesianGrid,
   Tooltip,
   ResponsiveContainer,
+  Rectangle,
 } from "recharts";
 import "../../styles/durationSessions_block.css";
 
 const DurationSessions = (props) => {
   const { dataAverageSessions } = props;
-  console.log(dataAverageSessions);
   const week = ["L", "M", "M", "J", "V", "S", "D"];
 
- /* const a = {
-
-    1 : "L",
-    2 : "M",
-    3 : "M",
-    4 : "J",
-    5: "V",
-    6: "S",
-    7 : "D",
-
-  }*/
   const formatDate = (day, index) => {
-    console.log(day)
-    console.log(week[index])
     day = week[index];
     return day;
   };
@@ -46,6 +33,20 @@ const DurationSessions = (props) => {
     return null;
   };
 
+  const CustomCursor = ({ points, width, height }) => {
+    const { x, y } = points[0];
+    return (
+      <Rectangle
+        fill="rgba(0, 0, 0, 0.2)"
+        margin="10px"
+        x={x}
+        y={y}
+        width={width}
+        height={height}
+      />
+    );
+  };
+
   return (
     <div className="durationSessions_block">
       <ResponsiveContainer width="90%" height="100%">
@@ -59,10 +60,10 @@ const DurationSessions = (props) => {
           }}
         >
           <XAxis dataKey="day" tickFormatter={formatDate} />
-          <YAxis  hide={true} domain={["dataMin", "dataMax+20"]} />
+          <YAxis hide={true} domain={["dataMin", "dataMax+20"]} />
           <Tooltip
-       
             content={<CustomTooltip />}
+            cursor={<CustomCursor/>}
             wrapperStyle={{
               width: "10%",
               color: "#000",
