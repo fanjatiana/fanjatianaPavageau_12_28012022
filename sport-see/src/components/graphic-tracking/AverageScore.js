@@ -1,3 +1,4 @@
+import { registry } from "chart.js";
 import propTypes from "prop-types";
 import React from "react";
 import {
@@ -10,8 +11,47 @@ import {
 import "../../styles/averageScore_block.css";
 
 const AverageScore = (props) => {
-  console.log(props);
-  const COLORS = ["#FF0000"];
+  const { dataScore } = props;
+  const score =
+    dataScore.id === 18 ? dataScore.score * 100 : dataScore.todayScore * 100;
+
+  const customTick = () => {
+    const value = score;
+    const text1 = "de votre";
+    const text2 = "objectif";
+    return (
+      <>
+        <text
+          x={"41.5%"}
+          y={"49%"}
+          fill="#282D30"
+          fontSize="26px"
+          fontWeight={700}
+        >
+          {value + "%"}
+        </text>
+        <text
+          x={"39%"}
+          y={"59%"}
+          fill="#282D30"
+          fontSize="16px"
+          fontWeight={500}
+        >
+          {text1}
+        </text>
+        <text
+          x={"39.5%"}
+          y={"68%"}
+          fill="#282D30"
+          fontSize="16px"
+          fontWeight={500}
+        >
+          {text2}
+        </text>
+      </>
+    );
+  };
+
   return (
     <div className="averageScore_block">
       <ResponsiveContainer width="100%" height="100%">
@@ -21,23 +61,17 @@ const AverageScore = (props) => {
           innerRadius="100%"
           outerRadius="70%"
           startAngle={90}
-          data={[props]}
+          data={[dataScore]}
         >
-          <PolarAngleAxis domain={[0, 100]} type="number" tick={false} />
+          <PolarAngleAxis domain={[0, 100]} type="number" tick={customTick} />
           <RadialBar
             barSize={10}
             minAngle={15}
-            label={{ position: "center", fill: "#000" }}
+            label={false}
             fill="#FF0000"
-            dataKey="dataScore"
+            dataKey={score}
             cornerRadius={5}
           />
-          {/*<Legend
-            iconSize={10}
-            layout="vertical"
-            verticalAlign="middle"
-            wrapperStyle=""
-          />*/}
         </RadialBarChart>
       </ResponsiveContainer>
     </div>
@@ -45,7 +79,7 @@ const AverageScore = (props) => {
 };
 
 AverageScore.propTypes = {
-  dataScore: propTypes.number.isRequired,
+  dataScore: propTypes.object.isRequired,
 };
 
 export default AverageScore;

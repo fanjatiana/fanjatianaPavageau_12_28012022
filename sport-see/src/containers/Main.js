@@ -11,7 +11,7 @@ const Main = () => {
   const url = useParams();
   const userId = url.id;
   const { isLoading, data, error } = useFetchById(userId);
-
+ 
   if (error) return <NotFound />;
 
   if (isLoading) return <>is loading</>;
