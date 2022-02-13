@@ -2,9 +2,7 @@ import propTypes from "prop-types";
 import React from "react";
 import "../styles/helloUser.css";
 
-const HelloUser = (props) => {
-  const { name } = props;
-
+const HelloUser = ({ name }) => {
   return (
     <div className="helloUser_container">
       <h2>

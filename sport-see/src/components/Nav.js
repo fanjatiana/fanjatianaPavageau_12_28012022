@@ -7,44 +7,16 @@ const Nav = () => {
     <div className="block_nav-link">
       <ul className="nav-link_list">
         <li>
-          <NavLink
-            to="/"
-            className={({ isActive }) =>
-              "header_Nav_link" + (isActive ? " activated" : "")
-            }
-          >
-            Accueil
-          </NavLink>
+          <NavLink to="/">Accueil</NavLink>
         </li>
         <li>
-          <NavLink
-            to="*"
-            className={({ isActive }) =>
-              "header_Nav_link" + (isActive ? " activated" : "")
-            }
-          >
-            Profil
-          </NavLink>
+          <NavLink to="*">Profil</NavLink>
         </li>
         <li>
-          <NavLink
-            to="*"
-            className={({ isActive }) =>
-              "header_Nav_link" + (isActive ? " activated" : "")
-            }
-          >
-            Réglage
-          </NavLink>
+          <NavLink to="*">Réglage</NavLink>
         </li>
         <li>
-          <NavLink
-            to="*"
-            className={({ isActive }) =>
-              "header_Nav_link" + (isActive ? " activated" : "")
-            }
-          >
-            Communauté
-          </NavLink>
+          <NavLink to="*">Communauté</NavLink>
         </li>
       </ul>
     </div>

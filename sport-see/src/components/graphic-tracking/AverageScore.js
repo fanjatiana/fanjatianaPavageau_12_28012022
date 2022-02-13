@@ -1,22 +1,17 @@
-import { registry } from "chart.js";
 import propTypes from "prop-types";
 import React from "react";
 import {
   ResponsiveContainer,
   RadialBarChart,
   RadialBar,
-  Legend,
   PolarAngleAxis,
 } from "recharts";
 import "../../styles/averageScore_block.css";
 
-const AverageScore = (props) => {
-  const { dataScore } = props;
-  const score =
-    dataScore.id === 18 ? dataScore.score * 100 : dataScore.todayScore * 100;
+const AverageScore = ({ dataScore }) => {
 
   const customTick = () => {
-    const value = score;
+    const value = dataScore;
     const text1 = "de votre";
     const text2 = "objectif";
     return (
@@ -69,7 +64,7 @@ const AverageScore = (props) => {
             minAngle={15}
             label={false}
             fill="#FF0000"
-            dataKey={score}
+            dataKey={dataScore}
             cornerRadius={5}
           />
         </RadialBarChart>
@@ -79,7 +74,7 @@ const AverageScore = (props) => {
 };
 
 AverageScore.propTypes = {
-  dataScore: propTypes.object.isRequired,
+  dataScore: propTypes.number.isRequired,
 };
 
 export default AverageScore;

@@ -3,8 +3,7 @@ import React from "react";
 import "../styles/icon.css";
 
 
-const Icon = (props) => {
-  const { imgIcon, imgDescription } = props;
+const Icon = ({ imgIcon, imgDescription }) => {
   return (
     <div className="icon">
       <img src={imgIcon} alt={imgDescription} />

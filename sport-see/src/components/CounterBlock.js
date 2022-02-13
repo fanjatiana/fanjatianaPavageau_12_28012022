@@ -8,8 +8,7 @@ import ProteinIcon from "../assets/protein-icon.svg";
 import "../styles/counter_block.css";
 import propTypes from "prop-types";
 
-const CounterBlock = (props) => {
-  const { calorieValue, proteinValue, carbohydrateValue, lipidValue } = props;
+const CounterBlock = ({ calorieValue, proteinValue, carbohydrateValue, lipidValue }) => {
   return (
     <>
       <div className="caloriesCounter_block">
@@ -20,7 +19,7 @@ const CounterBlock = (props) => {
         </div>
       </div>
       <div className="caloriesCounter_block">
-        <Icon imgIcon={ProteinIcon} imgDescription="icone cuisse de poulet " />
+        <Icon imgIcon={ProteinIcon} imgDescription="icone viande " />
         <div className="calories_info">
           <h4>Proteines</h4>
           <p>{proteinValue}g</p>

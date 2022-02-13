@@ -5,59 +5,56 @@ import {
   RadarChart,
   PolarGrid,
   PolarAngleAxis,
-  PolarRadiusAxis,
   ResponsiveContainer,
 } from "recharts";
 import "../../styles/typeOfActivities_block.css";
-const replaceNumbers = {
-  1: "Cardio",
-  2: "Energie",
-  3: "Endurance",
-  4: "Force",
-  5: "Vitesse",
-  6: "Intensité",
-};
 
+const TypeOfActivities = ({ dataPerformance }) => {
+  // fonction pour modifier les valeurs du composant PolarAngleAxis
+  const replaceNumbers = {
+    1: "Cardio",
+    2: "Energie",
+    3: "Endurance",
+    4: "Force",
+    5: "Vitesse",
+    6: "Intensité",
+  };
+  const formatKind = kind => replaceNumbers[kind];
 
-const TypeOfActivities = (props) => {
-  const { dataPerformance } = props;
-  //console.log(dataPerformance.data)
-  //console.log([...dataPerformance.data])
- const formatKind = (kind) => replaceNumbers[kind];
   return (
     <div className="typeOfActivities_block">
-      <ResponsiveContainer width="100%" height="100%"
-      style={{margin:"auto"}}>
+      <ResponsiveContainer
+        width="100%"
+        height="100%"
+        style={{ margin: "auto" }}>
         <RadarChart
           cx="50%"
           cy="50%"
           outerRadius="50%"
           data={[...dataPerformance.data].reverse()}
-
-          
-          style = {{background:"#000"}}
-        >
-          <PolarGrid radialLines={false}/>
-          <PolarAngleAxis dataKey="kind" tickFormatter={formatKind} dx={2} dy={2}tickLine={false}  stroke="#FFF"
-          />
-       
+          style={{ background: "#000" }} >
+          <PolarGrid radialLines={false} />
+          <PolarAngleAxis
+            dataKey="kind"
+            tickFormatter={formatKind}
+            dx={2}
+            dy={2}
+            tickLine={false}
+            stroke="#FFF"/>
           <Radar
             name=""
             dataKey="value"
             stroke="#FF0000"
             fill="#FF0000"
-            fillOpacity={0.6}
-           
-          />
+            fillOpacity={0.6}/>
         </RadarChart>
       </ResponsiveContainer>
     </div>
   );
 };
 
-
 TypeOfActivities.propTypes = {
-  dataPerformance: propTypes.object.isRequired
-}
+  dataPerformance: propTypes.object.isRequired,
+};
 
 export default TypeOfActivities;

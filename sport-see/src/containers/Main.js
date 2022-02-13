@@ -11,10 +11,11 @@ const Main = () => {
   const url = useParams();
   const userId = url.id;
   const { isLoading, data, error } = useFetchById(userId);
- 
+
   if (error) return <NotFound />;
 
-  if (isLoading) return <>is loading</>;
+  if (isLoading) return <> is loading </>;
+
   return (
     <main id="main_container">
       <HelloUser name={data.Infos.userInfos.firstName} />

@@ -1,5 +1,5 @@
 import propTypes from "prop-types";
-import React, { PureComponent } from "react";
+import React from "react";
 import {
   BarChart,
   Bar,
@@ -12,13 +12,12 @@ import {
 } from "recharts";
 
 import "../../styles/dailyActivities_block.css";
-const DailyActivities = (props) => {
-  const { dataActivity } = props;
-  const formatDate = (index) => {
-    return index + 1;
-  };
+const DailyActivities = ({ dataActivity }) => {
+  
+  // fonction permettant l'affichage de l'index à partir de 1 et non de 0
+  const formatDate = (index) => index + 1;
 
-  const CustomTooltip = ({ active, payload, label }) => {
+  const CustomTooltip = ({ active, payload}) => {
     if (active && payload && payload.length) {
       return (
         <div className="custom-tooltip">
@@ -27,7 +26,6 @@ const DailyActivities = (props) => {
         </div>
       );
     }
-
     return null;
   };
 
@@ -38,7 +36,7 @@ const DailyActivities = (props) => {
         <BarChart
           data={dataActivity}
           margin={{
-            top:30,
+            top: 30,
             right: 0,
             left: 0,
             bottom: 50,
@@ -50,28 +48,24 @@ const DailyActivities = (props) => {
             stroke="#FBFBFB"
           />
 
-          <XAxis
-            tickLine={false}
-            stroke="#dedede"
-            tickFormatter={formatDate}
-          />
+          <XAxis tickLine={false} stroke="#dedede" tickFormatter={formatDate} />
           <YAxis orientation="right" tickLine={false} axisLine={false} />
           <Tooltip
             content={<CustomTooltip />}
             position={{ y: -20 }}
             wrapperStyle={{
               width: "auto",
-              color:"#FFF",
+              color: "#FFF",
               height: 90,
               backgroundColor: "#E60000",
               display: "flex",
               flexDirection: "column",
-              justifyContent:"center",
-              alignContent :"space-between",
-              alignItems:"center",
+              justifyContent: "center",
+              alignContent: "space-between",
+              alignItems: "center",
               flexWrap: "wrap",
-              padding : "1em",
-              fontSize:"0.8em"
+              padding: "1em",
+              fontSize: "0.8em",
             }}
             cursor={{
               fill: "rgba(196, 196, 196, 0.5)",

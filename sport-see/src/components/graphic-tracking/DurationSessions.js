@@ -1,27 +1,25 @@
 import propTypes from "prop-types";
-import React, { PureComponent } from "react";
+import React from "react";
 import {
   AreaChart,
   Area,
   XAxis,
   YAxis,
-  CartesianGrid,
   Tooltip,
   ResponsiveContainer,
   Rectangle,
 } from "recharts";
 import "../../styles/durationSessions_block.css";
 
-const DurationSessions = (props) => {
-  const { dataAverageSessions } = props;
-  const week = ["L", "M", "M", "J", "V", "S", "D"];
-
+const DurationSessions = ({ dataAverageSessions }) => {
+  // fonction pour modifier les valeurs de l'axe X
+  const listOfDaysOfTheWeek = ["L", "M", "M", "J", "V", "S", "D"];
   const formatDate = (day, index) => {
-    day = week[index];
+    day = listOfDaysOfTheWeek[index];
     return day;
   };
 
-  const CustomTooltip = ({ active, payload, label }) => {
+  const CustomTooltip = ({ active, payload}) => {
     if (active && payload && payload.length) {
       return (
         <div className="custom-tooltip">
@@ -29,10 +27,10 @@ const DurationSessions = (props) => {
         </div>
       );
     }
-
     return null;
   };
 
+  // affichage et customisation d'un rectangle décoratif au survole du graphique
   const CustomCursor = ({ points, width, height }) => {
     const { x, y } = points[0];
     return (
@@ -52,24 +50,21 @@ const DurationSessions = (props) => {
       <h3>Durée moyenne des sessions</h3>
       <ResponsiveContainer width="90%" height="100%">
         <AreaChart
-     
           data={dataAverageSessions}
           margin={{
             top: 10,
             right: 0,
             left: 20,
             bottom: 70,
-          }}
-          
-        >
-          <XAxis dataKey="day" tickFormatter={formatDate} fontSize="12px"
-   stroke="false"
-          padding={{ right: 10, left: 10 }}
-          tickLine={false}
-          axisLine={false}
-       
-          
-         />
+          }}>
+          <XAxis
+            dataKey="day"
+            tickFormatter={formatDate}
+            fontSize="12px"
+            stroke="false"
+            padding={{ right: 10, left: 10 }}
+            tickLine={false}
+            axisLine={false}/>
           <YAxis hide={true} domain={["dataMin", "dataMax+20"]} />
           <Tooltip
             content={<CustomTooltip />}
@@ -79,20 +74,20 @@ const DurationSessions = (props) => {
               textAlign: "center",
               backgroundColor: "#FFFFFF",
               padding: "0px 10px 0px 10px",
-            }}
-          />
+            }}/>
           <Area
             type="monotone"
             dataKey="sessionLength"
             stroke="#FFF"
-            fill="rgba(255, 255, 255, 0.1)"
-          />
+            fill="rgba(255, 255, 255, 0.1)"/>
         </AreaChart>
       </ResponsiveContainer>
     </div>
   );
 };
+
 DurationSessions.propTypes = {
   dataAverageSessions: propTypes.array.isRequired,
 };
+
 export default DurationSessions;
