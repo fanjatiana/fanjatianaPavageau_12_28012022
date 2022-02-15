@@ -1,8 +1,7 @@
 .aside_container {
   background: #020203;
   width: 100px;
-  height: 1100px;
-  min-height: 800px;
+  min-height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
