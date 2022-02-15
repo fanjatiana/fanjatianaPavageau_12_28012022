@@ -49,16 +49,19 @@ const AverageScore = ({ dataScore }) => {
 
   return (
     <div className="averageScore_block">
+      <div className="graphic_title">
+        <h3>Score</h3>
+      </div>
       <ResponsiveContainer width="100%" height="100%">
         <RadialBarChart
           cx="50%"
           cy="50%"
           innerRadius="100%"
           outerRadius="70%"
-          startAngle={90}
+          startAngle="90"
           data={[dataScore]}
         >
-          <PolarAngleAxis domain={[0, 100]} type="number" tick={customTick} />
+          <PolarAngleAxis domain={[0, 100]} type="number" tick={customTick} angleAxisId={0} />
           <RadialBar
             barSize={10}
             minAngle={15}

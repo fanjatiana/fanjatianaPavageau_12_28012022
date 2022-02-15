@@ -19,7 +19,7 @@ const DurationSessions = ({ dataAverageSessions }) => {
     return day;
   };
 
-  const CustomTooltip = ({ active, payload}) => {
+  const CustomTooltip = ({ active, payload }) => {
     if (active && payload && payload.length) {
       return (
         <div className="custom-tooltip">
@@ -47,24 +47,28 @@ const DurationSessions = ({ dataAverageSessions }) => {
 
   return (
     <div className="durationSessions_block">
-      <h3>Durée moyenne des sessions</h3>
+      <div className="graphic_title">
+        <h3>Durée moyenne des sessions</h3>
+      </div>
       <ResponsiveContainer width="90%" height="100%">
         <AreaChart
           data={dataAverageSessions}
           margin={{
-            top: 10,
+            top: 0,
             right: 0,
-            left: 20,
-            bottom: 70,
-          }}>
+            left: 0,
+            bottom: 0,
+          }}
+        >
           <XAxis
             dataKey="day"
             tickFormatter={formatDate}
             fontSize="12px"
-            stroke="false"
+            stroke="rgba(255,255,255,0.7"
             padding={{ right: 10, left: 10 }}
             tickLine={false}
-            axisLine={false}/>
+            axisLine={false}
+          />
           <YAxis hide={true} domain={["dataMin", "dataMax+20"]} />
           <Tooltip
             content={<CustomTooltip />}
@@ -74,12 +78,14 @@ const DurationSessions = ({ dataAverageSessions }) => {
               textAlign: "center",
               backgroundColor: "#FFFFFF",
               padding: "0px 10px 0px 10px",
-            }}/>
+            }}
+          />
           <Area
             type="monotone"
             dataKey="sessionLength"
             stroke="#FFF"
-            fill="rgba(255, 255, 255, 0.1)"/>
+            fill="rgba(255, 255, 255, 0.15)"
+          />
         </AreaChart>
       </ResponsiveContainer>
     </div>

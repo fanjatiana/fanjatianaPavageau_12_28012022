@@ -35,61 +35,61 @@ const DailyActivities = ({ dataActivity }) => {
       <ResponsiveContainer width="100%" height="100%">
         <BarChart
           data={dataActivity}
+          barGap="10%"
           margin={{
             top: 30,
             right: 0,
-            left: 0,
+            left: 15,
             bottom: 50,
           }}
         >
           <CartesianGrid
             strokeDasharray="3"
             vertical={false}
-            stroke="#FBFBFB"
+            stroke="#dedede"
           />
 
-          <XAxis tickLine={false} stroke="#dedede" tickFormatter={formatDate} />
-          <YAxis orientation="right" tickLine={false} axisLine={false} />
+          <XAxis dy={15} tickLine={false} axisLine={true} stroke="#dedede" tickFormatter={formatDate}  dataKey ={dataActivity.index} tick={{fill: '#9B9EAC'}} padding={{left:0, right:0}} />
+          <YAxis orientation="right" tickLine={false} axisLine={false} tick={{fill: '#9B9EAC'}} dx={15}/>
           <Tooltip
             content={<CustomTooltip />}
-            position={{ y: -20 }}
+            position={{ y: 10 }}
             wrapperStyle={{
-              width: "auto",
+              width: "72px",
               color: "#FFF",
-              height: 90,
+              height: "90px",
               backgroundColor: "#E60000",
               display: "flex",
-              flexDirection: "column",
               justifyContent: "center",
-              alignContent: "space-between",
               alignItems: "center",
-              flexWrap: "wrap",
-              padding: "1em",
+              marginLeft: "40px",
               fontSize: "0.8em",
+              textAlign:"center",
+              padding : "1em 0"
             }}
             cursor={{
               fill: "rgba(196, 196, 196, 0.5)",
-              strokeWidth: 1,
+            
             }}
           />
           <Legend
             iconType="circle"
-            width="50%"
             layout="horizontal"
             verticalAlign="top"
             align="right"
-            wrapperStyle={{ top: -40, right: 0 }}
+            wrapperStyle={{ top: -20, right: 0 }}
+           
           />
           <Bar
             dataKey="kilogram"
-            name="poids(kg)"
+            name="poids (kg)"
             fill="#282D30"
-            barSize={10}
+            barSize={15}
             radius={[30, 30, 0, 0]}
           />
           <Bar
             radius={[30, 30, 0, 0]}
-            barSize={10}
+            barSize={15}
             dataKey="calories"
             name="calories brûlées (kCal)"
             fill="#E60000"

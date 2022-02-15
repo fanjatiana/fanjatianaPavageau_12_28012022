@@ -30,9 +30,10 @@ const TypeOfActivities = ({ dataPerformance }) => {
         <RadarChart
           cx="50%"
           cy="50%"
-          outerRadius="50%"
+          outerRadius="60%"
+          innerRadius="10%"
           data={[...dataPerformance.data].reverse()}
-          style={{ background: "#000" }} >
+           >
           <PolarGrid radialLines={false} />
           <PolarAngleAxis
             dataKey="kind"
@@ -40,6 +41,7 @@ const TypeOfActivities = ({ dataPerformance }) => {
             dx={2}
             dy={2}
             tickLine={false}
+            tick={{fontSize:12, fontWeight:500}}
             stroke="#FFF"/>
           <Radar
             name=""

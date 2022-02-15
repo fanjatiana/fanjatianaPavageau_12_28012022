@@ -1,4 +1,14 @@
 .averageScore_block{
     width: 30%;
     height: 30%;
+    position: relative;
+    background: #FBFBFB ;
+    border-radius: 5px;
+}
+
+.graphic_title{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 15px;
 }
