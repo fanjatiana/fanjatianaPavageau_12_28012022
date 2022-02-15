@@ -14,8 +14,8 @@ To use the SportSee application you must install and launch the micro API and ha
 
 ### 1.1 Prerequisites
 
-    -NodeJS (version 12.18)
-    -Yarn
+- NodeJS (version 12.18)
+- Yarn
 
 If you are working with several versions of NodeJS, we recommend you install nvm. This tool will allow you to easily manage your NodeJS versions.
 
@@ -23,10 +23,10 @@ If you are working with several versions of NodeJS, we recommend you install nvm
 
 Github repository : https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard.git.
    
-    -Fork the repository
-    -Clone it on your computer.
-    -The yarn command will allow you to install the dependencies.
-    -The yarn dev command will allow you to run the micro API.
+- Fork the repository
+- Clone it on your computer.
+- The yarn command will allow you to install the dependencies.
+- The yarn dev command will allow you to run the micro API.
 
 
 ## 2. To launch and use the application
@@ -35,8 +35,8 @@ Github repository : https://github.com/OpenClassrooms-Student-Center/P9-front-en
 
 Github repository : https://github.com/fanjatiana/fanjatianaPavageau_12_28012022.git.
 
-     -Fork the repository
-     -Clone it on your computer.
+- Fork the repository
+- Clone it on your computer.
 
 ### 2.2 To launch the application
 
