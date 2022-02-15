@@ -23,7 +23,7 @@ const DurationSessions = ({ dataAverageSessions }) => {
     if (active && payload && payload.length) {
       return (
         <div className="custom-tooltip">
-          <p>{`${payload[0].payload.sessionLength}`}</p>
+          <p>{`${payload[0].payload.sessionLength}`} min</p>
         </div>
       );
     }
@@ -77,7 +77,9 @@ const DurationSessions = ({ dataAverageSessions }) => {
               fontSize: "12px",
               textAlign: "center",
               backgroundColor: "#FFFFFF",
-              padding: "0px 10px 0px 10px",
+              padding: "0px 5px 15px",
+              width:"39px",
+              height:"25px"
             }}
           />
           <Area
