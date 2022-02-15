@@ -8,11 +8,15 @@
   justify-content: center;
 }
 
-h2 {
+.login_container h2 + p {
+  font-family: 'Roboto', sans-serif;
+}
+
+.login_container h2 {
   font-size: 3rem;
 }
 
-p {
+.login_container p {
   font-size: 1.5rem;
 }
 
@@ -49,6 +53,7 @@ a{
     color: #FFF;
     text-align: center;
     font-size: 1.2rem;
+    font-family: 'Roboto', sans-serif;
 }
 
 a .avatar{

@@ -1,12 +1,14 @@
 .durationSessions_block{
-    width: 30%;
-    height: 30%;
+    width: 258px;
+    height: 263px;
     background: #FF0000;
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
     border-radius: 5px;
+    align-self: flex-end;
+    margin-bottom: 2em;
    
 }
 .graphic_title{

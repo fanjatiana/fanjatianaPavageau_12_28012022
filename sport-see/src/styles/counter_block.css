@@ -1,11 +1,13 @@
 .caloriesCounter_block{
-    width: 100%;
+    width: 70%;
     display: flex;
     justify-content: center;
     background: #FBFBFB;
-    margin: 1em 0 0;
+    margin: 1em auto;
     border-radius: 5px;
-    padding: 0.8em 0;
+    padding: 1em;
+    align-items: center;
+    height: 124px;
 }
 
 .caloriesCounter_block .icon{
@@ -21,15 +23,22 @@ height: 60px;
     flex-direction: column-reverse;
     margin-left : 1em;
     height: 60px;
+    width: 100px;
 }
 
-p{
+.calories_info p{
     margin-top: 0;
     margin-bottom: 1em;
     font-weight: bold;
-    font-size: 1.3em;
+    font-size: 1.2em;
+    font-family: 'Roboto', sans-serif;
+   
 }
-h4 {
+.calories_info h4 {
     margin : 0;
-    font-weight: lighter;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    color: #74798C;
+
 }

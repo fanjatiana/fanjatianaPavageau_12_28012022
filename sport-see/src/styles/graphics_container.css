@@ -1,8 +1,14 @@
 .graphics_container{
-    height: 800px;
+height: 80%;
     width: 65%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    margin-left: 5%;
+    margin: 1em 0 0 5%;
+}
+
+h3{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
 }

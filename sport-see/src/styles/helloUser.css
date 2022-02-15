@@ -1,8 +1,23 @@
 .helloUser_container{
     width: 90%;
     margin: auto;
+    height: 20%;
 }
 
-h2 span{
+.helloUser_container h2{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 48px;
+
+}
+
+.helloUser_container h2 span{
     color: #FF0101;
+    
+}
+
+.helloUser_container p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
 }

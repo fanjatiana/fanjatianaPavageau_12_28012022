@@ -61,11 +61,11 @@ const AverageScore = ({ dataScore }) => {
           startAngle="90"
           data={[dataScore]}
         >
-          <PolarAngleAxis domain={[0, 100]} type="number" tick={customTick} angleAxisId={0} />
+          <PolarAngleAxis domain={[0, 100]} type="number" tick={false} angleAxisId={0} />
           <RadialBar
             barSize={10}
             minAngle={15}
-            label={false}
+            label={customTick}
             fill="#FF0000"
             dataKey={dataScore}
             cornerRadius={5}

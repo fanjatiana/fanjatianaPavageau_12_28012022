@@ -1,8 +1,9 @@
 .dailyActivities_block{
-    height: 50%;
+    height: 400px;
     width: 100%;
     background : #FBFBFB;
     padding:  1em 1em 0 0;
+    margin-bottom: 1em;
 }
 
 .custom-tooltip p:first-child{
