@@ -1,5 +1,5 @@
 import React from "react";
-import HelloUser from "../components/HelloUser";
+import HelloUser from "./HelloUser";
 import CalorieCounter from "./CalorieCounter";
 import "../styles/main.css";
 import { useParams } from "react-router-dom";

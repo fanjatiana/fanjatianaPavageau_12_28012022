@@ -4,12 +4,12 @@ import "../styles/helloUser.css";
 
 const HelloUser = ({ name }) => {
   return (
-    <div className="helloUser_container">
+    <section className="helloUser_container">
       <h2>
         Bonjour <span>{name}</span>
       </h2>
       <p>Félicitation ! Vous avez explosé vos objectifs hier 👏</p>
-    </div>
+    </section>
   );
 };
 
