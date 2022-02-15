@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import { USER_MAIN_DATA } from "../api/data.js";
+import { USER_MAIN_DATA } from "../api/mockData.js";
 import "../styles/loginPage.css";
 import AvatarMen from "../assets/men.jpg";
 import AvatarWomen from "../assets/women.jpg";

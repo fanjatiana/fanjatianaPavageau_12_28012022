@@ -6,11 +6,13 @@ import { useParams } from "react-router-dom";
 import { useFetchById } from "../api/useFetch";
 import NotFound from "../pages/NotFound";
 import Graphics from "./Graphics";
+import { useFetchByIdFromMockedData } from "../api/useFetchFromMocks";
 
 const Main = () => {
   const url = useParams();
   const userId = url.id;
   const { isLoading, data, error } = useFetchById(userId);
+  // const { isLoading, data, error } = useFetchByIdFromMockedData(userId);
 
   if (error) return <NotFound />;
 

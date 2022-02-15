@@ -1,32 +1,7 @@
-import axios from "axios";
 import { useEffect, useState } from "react";
 
-export function useFetch(url) {
-  const [data, setData] = useState(null);
-  const [isLoading, setLoading] = useState(true);
-  const [error, setError] = useState(false);
-
-  useEffect(() => {
-    if (!url) return;
-    setLoading(true);
-
-    async function fetchData() {
-      try {
-        const { data: response } = await axios.get(url);
-        setData(response);
-      } catch (err) {
-        setError(true);
-      } finally {
-        setLoading(false);
-      }
-    }
-
-    fetchData();
-  }, [url]);
-  return { isLoading, data, error };
-}
-
-export function useFetchById(id) {
+// fonction fetch data depuis le micro API
+export const useFetchById = (id) => {
   const [data, setData] = useState(null);
   const [isLoading, setLoading] = useState(true);
   const [error, setError] = useState(false);
@@ -37,9 +12,11 @@ export function useFetchById(id) {
     const averageSessions = userId + "/average-sessions";
     const performance = userId + "/performance";
     const arrayUrls = [userId, activity, averageSessions, performance];
+
     if (!id) return;
     setLoading(true);
 
+    // l.24 : gestion des erreurs et du chargement de la page si la requête a échoué (necessite toutes les données du tableau)
     async function fetchData() {
       Promise.all(
         arrayUrls.map((url) =>
@@ -53,7 +30,6 @@ export function useFetchById(id) {
         )
       ).then((userData) => {
         const [Infos, Activity, AverageSessions, Performance] = userData;
- 
         setData({
           Infos: Infos.data,
           ACtivity: Activity.data,
@@ -67,4 +43,4 @@ export function useFetchById(id) {
     fetchData();
   }, [id]);
   return { isLoading, data, error };
-}
+};
