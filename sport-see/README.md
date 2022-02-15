@@ -1,70 +1,79 @@
-# Getting Started with Create React App
+![application-sportsee](https://user-images.githubusercontent.com/60699482/153426552-2228944d-398d-4f56-b219-70b88bf45dd2.svg)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Build an analytics dashboard with React 
 
-## Available Scripts
 
-In the project directory, you can run:
+![Capture d’écran de 2022-02-10 15-06-35](https://user-images.githubusercontent.com/60699482/153424188-22241b67-d515-4395-b715-407f7cc10893.png)
 
-### `npm start`
+This repo contains all the source code of the SportSee application.
 
-Runs the app in the development mode.\
+To use the SportSee application you must install and launch the micro API and have installed Create React App.
+
+
+## 1. Installing the micro API (without docker)
+
+### 1.1 Prerequisites
+
+    -NodeJS (version 12.18)
+    -Yarn
+
+If you are working with several versions of NodeJS, we recommend you install nvm. This tool will allow you to easily manage your NodeJS versions.
+
+### 1.2 Launching the project
+
+Github repository : https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard.git.
+   
+    -Fork the repository
+    -Clone it on your computer.
+    -The yarn command will allow you to install the dependencies.
+    -The yarn dev command will allow you to run the micro API.
+
+
+## 2. To launch and use the application
+
+### 2.1 Prerequisites
+
+Github repository : https://github.com/fanjatiana/fanjatianaPavageau_12_28012022.git.
+
+     -Fork the repository
+     -Clone it on your computer.
+
+### 2.2 To launch the application
+
+ a. In the project directory, you can run from your terminal :
+
+ `npm start`
+
+ b. Runs the app in the development mode:
+
+Runs the app in the development mode.
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
+The page will reload when you make changes.
 You may also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 3. Application development
 
-### `npm run build`
+### 3.1 Documentation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The mockup: https://www.figma.com/file/BMomGVZqLZb811mDMShpLu/UI-design-Sportify-FR?node-id=0%3A1.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The kanban and user stories : https://www.notion.so/openclassrooms/Copy-of-Dev4U-projet-Learn-Home-6686aa4b5f44417881a4884c9af5669e.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 3.2 Development
 
-### `npm run eject`
+![languages-html-_-css-_-javascript](https://user-images.githubusercontent.com/60699482/153428928-f8c6f823-2890-4b01-adb5-6849c06ef24e.svg)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+![library-react-js](https://user-images.githubusercontent.com/60699482/153428964-75a1e04b-c487-46ac-901a-5a7a2919e45e.svg)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![charting-library-recharts](https://user-images.githubusercontent.com/60699482/153428985-002a0036-9bfe-43a1-9d5b-4dca47f02a67.svg)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 4. Authors
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Project documents and API : OpenClassrooms (https://openclassrooms.com/fr/).
 
-## Learn More
+Application development : Pavageau Fanjatiana (student).
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
