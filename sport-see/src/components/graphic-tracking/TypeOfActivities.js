@@ -10,7 +10,8 @@ import {
 import "../../styles/typeOfActivities_block.css";
 
 const TypeOfActivities = ({ dataPerformance }) => {
-  // fonction pour modifier les valeurs du composant PolarAngleAxis
+  
+  // function to change values ​​of PolarAngleAxis component
   const replaceNumbers = {
     1: "Cardio",
     2: "Energie",

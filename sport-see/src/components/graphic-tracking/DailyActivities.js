@@ -13,9 +13,10 @@ import {
 
 import "../../styles/dailyActivities_block.css";
 const DailyActivities = ({ dataActivity }) => {
-  // fonction permettant l'affichage de l'index à partir de 1 et non de 0
+  // function allowing the display of the index from 1 and not from 0
   const formatDate = (index) => index + 1;
 
+  // function to update tooltip values ​​(user data) when hovering over the graph with the mouse
   const CustomTooltip = ({ active, payload }) => {
     if (active && payload && payload.length) {
       return (

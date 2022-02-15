@@ -12,13 +12,15 @@ import {
 import "../../styles/durationSessions_block.css";
 
 const DurationSessions = ({ dataAverageSessions }) => {
-  // fonction pour modifier les valeurs de l'axe X
+
+  // function to modify the values ​​of the X axis
   const listOfDaysOfTheWeek = ["L", "M", "M", "J", "V", "S", "D"];
   const formatDate = (day, index) => {
     day = listOfDaysOfTheWeek[index];
     return day;
   };
 
+  // function to update tooltip values ​​(user data) when hovering over the graph with the mouse
   const CustomTooltip = ({ active, payload }) => {
     if (active && payload && payload.length) {
       return (
@@ -30,7 +32,7 @@ const DurationSessions = ({ dataAverageSessions }) => {
     return null;
   };
 
-  // affichage et customisation d'un rectangle décoratif au survole du graphique
+  // function allowing  display and customization of the decorative rectangle when hovering over the graph
   const CustomCursor = ({ points, width, height }) => {
     const { x, y } = points[0];
     return (

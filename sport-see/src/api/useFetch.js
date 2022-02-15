@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-// fonction fetch data depuis le micro API
+// fetch data function from the micro API
 export const useFetchById = (id) => {
   const [data, setData] = useState(null);
   const [isLoading, setLoading] = useState(true);
@@ -16,7 +16,7 @@ export const useFetchById = (id) => {
     if (!id) return;
     setLoading(true);
 
-    // l.24 : gestion des erreurs et du chargement de la page si la requête a échoué (necessite toutes les données du tableau)
+    // l.24: management of errors and page loading if the request failed (requires all the data in the arrayUrls)
     async function fetchData() {
       Promise.all(
         arrayUrls.map((url) =>

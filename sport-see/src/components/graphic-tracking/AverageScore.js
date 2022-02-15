@@ -9,7 +9,9 @@ import {
 import "../../styles/averageScore_block.css";
 
 const AverageScore = ({ dataScore }) => {
-  const customTick = () => {
+
+  // function to customize of the label according to the user's {dataScore}
+  const CustomLabel = () => {
     const value = dataScore;
     const text1 = "de votre";
     const text2 = "objectif";
@@ -69,7 +71,7 @@ const AverageScore = ({ dataScore }) => {
           <RadialBar
             barSize={10}
             minAngle={15}
-            label={customTick}
+            label={CustomLabel}
             fill="#FF0000"
             dataKey={dataScore}
             cornerRadius={5}

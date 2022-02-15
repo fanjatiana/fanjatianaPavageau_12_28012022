@@ -6,13 +6,14 @@ import {
   USER_PERFORMANCE,
 } from "./mockData.js";
 
+// function to retrieve data locally (mocked data)
 export const useFetchByIdFromMockedData = (id) => {
   const [data, setData] = useState(null);
   const [isLoading, setLoading] = useState(true);
   const [error] = useState(false);
 
   useEffect(() => {
-    // tableau des données mockées
+    // array of mocked data
     const mockedData = [
       USER_MAIN_DATA,
       USER_ACTIVITY,
@@ -23,7 +24,7 @@ export const useFetchByIdFromMockedData = (id) => {
     if (!id) return;
     setLoading(true);
 
-    // on filtre les données en fonction de l'id
+    // we filter the data according to the id
     const arrayData = mockedData.map((array) =>
       array.filter((obj) => obj.id === parseInt(id))
     );
