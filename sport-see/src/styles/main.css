@@ -1,6 +1,6 @@
 #main_container {
   display: flex;
-  width: 1700px;
+  width: 100%;
   flex-direction: row-reverse;
   justify-content: space-between;
   flex-wrap: wrap;
