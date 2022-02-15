@@ -6,7 +6,7 @@ import { useParams } from "react-router-dom";
 import { useFetchById } from "../api/useFetch";
 import NotFound from "../pages/NotFound";
 import Graphics from "./Graphics";
-import { useFetchByIdFromMockedData } from "../api/useFetchFromMocks";
+// import { useFetchByIdFromMockedData } from "../api/useFetchFromMocks";
 
 const Main = () => {
   const url = useParams();

@@ -19,21 +19,22 @@ const TypeOfActivities = ({ dataPerformance }) => {
     5: "Vitesse",
     6: "Intensité",
   };
-  const formatKind = kind => replaceNumbers[kind];
+  const formatKind = (kind) => replaceNumbers[kind];
 
   return (
     <div className="typeOfActivities_block">
       <ResponsiveContainer
         width="100%"
         height="100%"
-        style={{ margin: "auto" }}>
+        style={{ margin: "auto" }}
+      >
         <RadarChart
           cx="50%"
           cy="50%"
           outerRadius="60%"
           innerRadius="10%"
           data={[...dataPerformance.data].reverse()}
-           >
+        >
           <PolarGrid radialLines={false} />
           <PolarAngleAxis
             dataKey="kind"
@@ -41,14 +42,16 @@ const TypeOfActivities = ({ dataPerformance }) => {
             dx={2}
             dy={2}
             tickLine={false}
-            tick={{fontSize:12, fontWeight:500}}
-            stroke="#FFF"/>
+            tick={{ fontSize: 12, fontWeight: 500 }}
+            stroke="#FFF"
+          />
           <Radar
             name=""
             dataKey="value"
             stroke="#FF0000"
             fill="#FF0000"
-            fillOpacity={0.6}/>
+            fillOpacity={0.6}
+          />
         </RadarChart>
       </ResponsiveContainer>
     </div>

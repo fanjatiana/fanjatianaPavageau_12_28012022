@@ -14,7 +14,7 @@ const HelloUser = ({ name }) => {
 };
 
 HelloUser.propTypes = {
-  name : propTypes.string.isRequired,
-}
+  name: propTypes.string.isRequired,
+};
 
 export default HelloUser;

@@ -8,7 +8,12 @@ import ProteinIcon from "../assets/protein-icon.svg";
 import "../styles/counter_block.css";
 import propTypes from "prop-types";
 
-const CounterBlock = ({ calorieValue, proteinValue, carbohydrateValue, lipidValue }) => {
+const CounterBlock = ({
+  calorieValue,
+  proteinValue,
+  carbohydrateValue,
+  lipidValue,
+}) => {
   return (
     <>
       <div className="caloriesCounter_block">

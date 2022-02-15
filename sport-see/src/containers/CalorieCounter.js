@@ -4,14 +4,13 @@ import CounterBlock from "../components/CounterBlock";
 import "../styles/caloriesCounter.css";
 
 const CalorieCounter = ({ data }) => {
-
   const keyData = {
     calorie: data.Infos.keyData.calorieCount,
     protein: data.Infos.keyData.proteinCount,
     carbohydrate: data.Infos.keyData.carbohydrateCount,
     lipid: data.Infos.keyData.lipidCount,
   };
-  
+
   return (
     <div className="caloriesCounter_container">
       <CounterBlock
@@ -25,7 +24,7 @@ const CalorieCounter = ({ data }) => {
 };
 
 CalorieCounter.propTypes = {
-  data : propTypes.object.isRequired
-}
+  data: propTypes.object.isRequired,
+};
 
 export default CalorieCounter;

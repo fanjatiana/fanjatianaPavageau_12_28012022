@@ -9,7 +9,6 @@ import {
 import "../../styles/averageScore_block.css";
 
 const AverageScore = ({ dataScore }) => {
-
   const customTick = () => {
     const value = dataScore;
     const text1 = "de votre";
@@ -61,7 +60,12 @@ const AverageScore = ({ dataScore }) => {
           startAngle="90"
           data={[dataScore]}
         >
-          <PolarAngleAxis domain={[0, 100]} type="number" tick={false} angleAxisId={0} />
+          <PolarAngleAxis
+            domain={[0, 100]}
+            type="number"
+            tick={false}
+            angleAxisId={0}
+          />
           <RadialBar
             barSize={10}
             minAngle={15}

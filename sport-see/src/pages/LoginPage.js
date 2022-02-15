@@ -12,9 +12,21 @@ const LoginPage = () => {
       <ul className="user_list">
         {USER_MAIN_DATA.map((user) => (
           <li key={user.id}>
-            <NavLink to={`/user/${user.id}` } >
+            <NavLink to={`/user/${user.id}`}>
               {user.userInfos.firstName}
-              {user.id === 12? <img className="avatar" src={AvatarMen} alt={`avatar de ${user.userInfos.firstName}`} /> : <img className="avatar" src={AvatarWomen} alt={`avatar de ${user.userInfos.firstName}`}/> }
+              {user.id === 12 ? (
+                <img
+                  className="avatar"
+                  src={AvatarMen}
+                  alt={`avatar de ${user.userInfos.firstName}`}
+                />
+              ) : (
+                <img
+                  className="avatar"
+                  src={AvatarWomen}
+                  alt={`avatar de ${user.userInfos.firstName}`}
+                />
+              )}
             </NavLink>
           </li>
         ))}

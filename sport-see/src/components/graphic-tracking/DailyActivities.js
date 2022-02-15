@@ -13,11 +13,10 @@ import {
 
 import "../../styles/dailyActivities_block.css";
 const DailyActivities = ({ dataActivity }) => {
-  
   // fonction permettant l'affichage de l'index à partir de 1 et non de 0
   const formatDate = (index) => index + 1;
 
-  const CustomTooltip = ({ active, payload}) => {
+  const CustomTooltip = ({ active, payload }) => {
     if (active && payload && payload.length) {
       return (
         <div className="custom-tooltip">
@@ -49,8 +48,23 @@ const DailyActivities = ({ dataActivity }) => {
             stroke="#dedede"
           />
 
-          <XAxis dy={15} tickLine={false} axisLine={true} stroke="#dedede" tickFormatter={formatDate}  dataKey ={dataActivity.index} tick={{fill: '#9B9EAC'}} padding={{left:0, right:0}} />
-          <YAxis orientation="right" tickLine={false} axisLine={false} tick={{fill: '#9B9EAC'}} dx={15}/>
+          <XAxis
+            dy={15}
+            tickLine={false}
+            axisLine={true}
+            stroke="#dedede"
+            tickFormatter={formatDate}
+            dataKey={dataActivity.index}
+            tick={{ fill: "#9B9EAC" }}
+            padding={{ left: 0, right: 0 }}
+          />
+          <YAxis
+            orientation="right"
+            tickLine={false}
+            axisLine={false}
+            tick={{ fill: "#9B9EAC" }}
+            dx={15}
+          />
           <Tooltip
             content={<CustomTooltip />}
             position={{ y: 10 }}
@@ -64,12 +78,11 @@ const DailyActivities = ({ dataActivity }) => {
               alignItems: "center",
               marginLeft: "40px",
               fontSize: "0.8em",
-              textAlign:"center",
-              padding : "1em 0"
+              textAlign: "center",
+              padding: "1em 0",
             }}
             cursor={{
               fill: "rgba(196, 196, 196, 0.5)",
-            
             }}
           />
           <Legend
@@ -78,7 +91,6 @@ const DailyActivities = ({ dataActivity }) => {
             verticalAlign="top"
             align="right"
             wrapperStyle={{ top: -20, right: 0 }}
-           
           />
           <Bar
             dataKey="kilogram"

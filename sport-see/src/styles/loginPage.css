@@ -9,7 +9,7 @@
 }
 
 .login_container h2 + p {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .login_container h2 {
@@ -48,15 +48,15 @@
   opacity: 1;
 }
 
-a{
-    width: 100%;
-    color: #FFF;
-    text-align: center;
-    font-size: 1.2rem;
-    font-family: 'Roboto', sans-serif;
+a {
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  font-size: 1.2rem;
+  font-family: "Roboto", sans-serif;
 }
 
-a .avatar{
+a .avatar {
   width: 100%;
   margin-top: 0.5em;
 }

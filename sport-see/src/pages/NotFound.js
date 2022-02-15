@@ -11,7 +11,9 @@ const NotFound = () => {
       </div>
       <div className="block_text">
         <h2>Oops page introuvable</h2>
-        <Link className="button_back-to-home" to="/">Retour vers la page d'accueil</Link>
+        <Link className="button_back-to-home" to="/">
+          Retour vers la page d'accueil
+        </Link>
       </div>
     </main>
   );

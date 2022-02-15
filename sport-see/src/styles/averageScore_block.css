@@ -1,16 +1,16 @@
-.averageScore_block{
-    width: 258px;
-    height: 263px;
-    position: relative;
-    background: #FBFBFB ;
-    border-radius: 5px;
-    align-self: flex-end;
-    margin-bottom: 2em;
+.averageScore_block {
+  width: 258px;
+  height: 263px;
+  position: relative;
+  background: #fbfbfb;
+  border-radius: 5px;
+  align-self: flex-end;
+  margin-bottom: 2em;
 }
 
-.graphic_title{
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    font-size: 15px;
+.graphic_title {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 15px;
 }

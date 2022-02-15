@@ -1,44 +1,42 @@
-.caloriesCounter_block{
-    width: 70%;
-    display: flex;
-    justify-content: center;
-    background: #FBFBFB;
-    margin: 1em auto;
-    border-radius: 5px;
-    padding: 1em;
-    align-items: center;
-    height: 124px;
+.caloriesCounter_block {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  background: #fbfbfb;
+  margin: 1em auto;
+  border-radius: 5px;
+  padding: 1em;
+  align-items: center;
+  height: 124px;
 }
 
-.caloriesCounter_block .icon{
-    margin:0;
+.caloriesCounter_block .icon {
+  margin: 0;
 }
-.caloriesCounter_block .icon img{
-width: 60px;
-height: 60px;
-}
-
-.calories_info{
-    display: flex;
-    flex-direction: column-reverse;
-    margin-left : 1em;
-    height: 60px;
-    width: 100px;
+.caloriesCounter_block .icon img {
+  width: 60px;
+  height: 60px;
 }
 
-.calories_info p{
-    margin-top: 0;
-    margin-bottom: 1em;
-    font-weight: bold;
-    font-size: 1.2em;
-    font-family: 'Roboto', sans-serif;
-   
+.calories_info {
+  display: flex;
+  flex-direction: column-reverse;
+  margin-left: 1em;
+  height: 60px;
+  width: 100px;
+}
+
+.calories_info p {
+  margin-top: 0;
+  margin-bottom: 1em;
+  font-weight: bold;
+  font-size: 1.2em;
+  font-family: "Roboto", sans-serif;
 }
 .calories_info h4 {
-    margin : 0;
-    font-weight: 500;
-    font-family: 'Roboto', sans-serif;
-    font-size: 1em;
-    color: #74798C;
-
+  margin: 0;
+  font-weight: 500;
+  font-family: "Roboto", sans-serif;
+  font-size: 1em;
+  color: #74798c;
 }

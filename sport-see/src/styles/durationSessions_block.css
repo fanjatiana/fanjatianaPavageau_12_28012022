@@ -1,28 +1,25 @@
-.durationSessions_block{
-    width: 258px;
-    height: 263px;
-    background: #FF0000;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    border-radius: 5px;
-    align-self: flex-end;
-    margin-bottom: 2em;
-   
+.durationSessions_block {
+  width: 258px;
+  height: 263px;
+  background: #ff0000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  border-radius: 5px;
+  align-self: flex-end;
+  margin-bottom: 2em;
 }
-.graphic_title{
-    position: absolute;
-    width: 50%;
-    top : 20px;
-    left: 20px;
+.graphic_title {
+  position: absolute;
+  width: 50%;
+  top: 20px;
+  left: 20px;
 }
-.durationSessions_block h3{
-    width: 100%;
-    margin-bottom: 0;
-    font-size: 1em;
-    color: #FFF;
-    opacity: 0.5;
-   
+.durationSessions_block h3 {
+  width: 100%;
+  margin-bottom: 0;
+  font-size: 1em;
+  color: #fff;
+  opacity: 0.5;
 }
-

@@ -12,7 +12,6 @@ export const useFetchByIdFromMockedData = (id) => {
   const [error] = useState(false);
 
   useEffect(() => {
-
     // tableau des données mockées
     const mockedData = [
       USER_MAIN_DATA,
@@ -38,7 +37,6 @@ export const useFetchByIdFromMockedData = (id) => {
     });
 
     setLoading(false);
-
   }, [id]);
-  return { isLoading, data,error};
+  return { isLoading, data, error };
 };

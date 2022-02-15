@@ -12,7 +12,13 @@ const Graphics = ({ data }) => {
       <DailyActivities dataActivity={data.ACtivity.sessions} />
       <DurationSessions dataAverageSessions={data.AverageSessions} />
       <TypeOfActivities dataPerformance={data.Performance} />
-      <AverageScore dataScore={data.Infos.score? data.Infos.score*100 : data.Infos.todayScore*100} />
+      <AverageScore
+        dataScore={
+          data.Infos.score
+            ? data.Infos.score * 100
+            : data.Infos.todayScore * 100
+        }
+      />
     </div>
   );
 };
